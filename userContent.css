@@ -1,0 +1,9 @@
+@-moz-document url-prefix("chrome://devtools/content/")
+{
+  * {
+    font-family: Iosevka !important;
+  }
+}
+:root[platform="win"] .devtools-tab {
+  font-family: Bahnschrift !important;
+}

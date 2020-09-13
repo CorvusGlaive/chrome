@@ -1,0 +1,7 @@
+@import "src/variables.css";
+@import "src/hide-tabsbar.css";
+@import "src/notification.css";
+@import "src/tabsbar.css";
+@import "src/urlbar.css";
+@import "src/navbar.css";
+@import "src/popup/popup.css";

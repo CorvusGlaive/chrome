@@ -1,0 +1,62 @@
+.tabbrowser-tab {
+  font-size: 12px !important;
+  font-family: var(--font-family) !important;
+  position: relative;
+}
+.tabbrowser-tab[first-visible-tab] {
+  margin-left: 8px !important;
+}
+#tabbrowser-tabs #tabs-newtab-button {
+  margin-inline-start: 6px !important;
+  fill: currentColor !important;
+}
+.tab-background {
+  border-radius: 3px 3px 0 0 !important;
+  border: 0 !important;
+  transition: background-color 0.3s var(--ease-basic) !important;
+}
+.tab-line {
+  display: none !important;
+}
+
+.titlebar-spacer[type="pre-tabs"] {
+  border: 0 !important;
+  opacity: 0 !important;
+  width: 0 !important;
+}
+
+.tabbrowser-tab::after {
+  right: 0;
+  position: absolute;
+  height: 70%;
+  transform: translateY(20%);
+  transition: opacity 0.3s var(--ease-basic) !important;
+}
+
+.tabbrowser-tab[visuallyselected="true"]::after,
+.tabbrowser-tab[beforeselected-visible]::after {
+  opacity: 0 !important;
+}
+
+.tabbrowser-tab:hover::after,
+.tabbrowser-tab[beforehovered]::after {
+  opacity: 0 !important;
+}
+
+#TabsToolbar[brighttext]
+  .tabbrowser-tab:hover
+  > .tab-stack
+  > .tab-background:not([selected="true"]):not([multiselected]) {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* #tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab[beforeselected-visible]::after,
+#tabbrowser-tabs[movingtab]
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab[visuallyselected]::before,
+.tabbrowser-tab[visuallyselected]::after {
+  border-color: var(--tabs-border-color);
+  display: none;
+} */

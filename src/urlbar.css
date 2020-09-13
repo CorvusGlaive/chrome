@@ -1,0 +1,101 @@
+#urlbar-input,
+#urlbar-scheme,
+.searchbar-textbox {
+  font-family: Iosevka !important;
+}
+#urlbar-input-container {
+  height: 26px !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+#urlbar,
+#searchbar {
+  font-size: 14px !important;
+  font-family: var(--font-family) !important;
+  background-color: var(--toolbar-field-background-color) !important;
+  border-radius: 3px !important;
+  line-height: 1.2 !important;
+  --urlbar-height: 26px !important;
+  --urlbar-toolbar-height: 32px !important;
+}
+
+#urlbar[focused],
+#searchbar[focused] {
+  border: 2px solid var(--toolbar-field-focus-border-color) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+#urlbar[breakout][breakout-extend] {
+  top: 1px !important;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+#urlbar-background {
+  display: none !important;
+}
+
+#urlbar-container,
+#search-container {
+  margin-inline: 0 !important;
+  --urlbar-container-height: 32px !important ;
+}
+
+.urlbarView-body-inner {
+  border: none !important;
+}
+
+#page-action-buttons > *,
+#urlbar-input-container > * {
+  border-radius: 3px !important;
+}
+
+#urlbar-input-container {
+  /* Match urlbar-background's border. */
+  border: none !important;
+}
+.urlbarView-body-inner {
+  width: 100% !important;
+  /*! border-top: 1px solid var(--urlbar-separator-color); */
+}
+.urlbarView-row {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+.urlbarView-row-inner {
+  padding: 12px 0 !important;
+  padding-inline: 14px 16px !important;
+}
+.urlbarView {
+  width: calc(100%) !important;
+  margin-inline: 0 !important;
+  border-inline: 0 !important;
+}
+.urlbarView-results {
+  padding-block: 0px !important;
+}
+#urlbar .search-one-offs:not([hidden]) {
+  padding-block: 7px !important;
+  padding-inline: 6px 6px !important;
+}
+#tracking-protection-icon-container,
+#identity-box {
+  border-inline-end: none !important;
+}
+.searchbar-engine-one-off-item {
+  border-radius: 3px !important;
+}
+
+.urlbar-icon {
+  width: var(--urlbar-height) !important;
+  height: var(--urlbar-height) !important;
+  padding: 5px !important;
+}
+
+.urlbarView-favicon {
+  margin-inline-end: 14px !important;
+}
+
+.urlbarView-title-separator::before {
+  content: "-" !important;
+}
