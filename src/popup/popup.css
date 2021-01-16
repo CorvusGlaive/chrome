@@ -1,3 +1,32 @@
+menu,
+menupopup,
+menuitem,
+panelview {
+  font-size: 12px;
+}
+.menu-right {
+  width: 16px !important;
+  height: 16px !important;
+}
+.menu-text {
+  margin-inline-start: 0 !important;
+}
+.menu-iconic-left {
+  padding-inline-end: 0 !important;
+  margin-inline-end: 0 !important;
+}
+.menu-iconic-text {
+  margin-inline-start: 0 !important;
+}
+#PanelUI-whatsNew .panelMenu-toggleWhatsNew-checkbox {
+  min-height: 30px !important;
+}
+#PanelUI-whatsNew .checkbox-check {
+  width: 16px !important;
+  height: 16px !important;
+  border: none !important;
+}
+
 menupopup,
 menupopup menuitem,
 menupopup menu,
@@ -19,7 +48,7 @@ panel[type="autocomplete-richlistbox"] {
 
 menupopup {
   padding: 11px 14px 18px !important;
-  margin: -19px -14px 0 !important;
+  margin: -11px -14px 0 !important;
 }
 
 /* needs to align with textbox/bookmark-button but can't overlap it */
@@ -35,6 +64,7 @@ panel[type="autocomplete-richlistbox"],
   box-shadow: none !important;
   font: -moz-pull-down-menu !important;
   border: 0 !important;
+  overflow: hidden !important;
 }
 
 .popup-internal-box,
@@ -174,9 +204,6 @@ scrollbox[orient=vertical] /* >=71 */ {
   -moz-context-properties: fill, fill-opacity, stroke, stroke-opacity !important;
   margin-inline-start: 0 !important;
   margin-inline-end: 16px !important;
-  width: 24px !important;
-  height: 24px !important;
-  padding: 4px !important;
 }
 
 .menu-text {
@@ -286,7 +313,7 @@ panelview .toolbarbutton-1,
 
 .subviewbutton .toolbarbutton-icon,
 .panel-banner-item .toolbarbutton-icon {
-  margin-inline-end: 16px !important;
+  margin-inline-end: 8px !important;
   width: 24px !important;
   height: 24px !important;
   padding: 4px !important;
@@ -295,6 +322,10 @@ panelview .toolbarbutton-1,
 .subviewbutton label,
 .panel-banner-item label {
   padding-inline-start: 0 !important;
+}
+
+.panel-subview-body {
+  padding: 0 !important;
 }
 
 #appMenu-zoom-controls > .subviewbutton,
@@ -557,10 +588,6 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   margin: 0 !important;
 }
 
-#customization-lwtheme-menu-header {
-  display: none !important;
-}
-
 #identity-popup-content-blocking-report-breakage {
   padding-inline-start: 48px !important;
   line-height: 32px !important;
@@ -649,22 +676,10 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   margin: 0 !important;
 }
 
-#downloadsPanel-multiView {
-  padding-top: 8px !important;
-}
-
-#downloadsListBox .download-state {
-  display: flex !important;
-  width: 100% !important;
-  align-items: center !important;
-}
-
 #downloadsListBox .downloadMainArea {
   padding: 0 !important;
   display: flex !important;
   flex: 1 !important;
-  margin-inline-end: -48px !important;
-  padding-inline-end: 48px !important;
   padding-inline-start: 16px !important;
   height: 100% !important;
   align-items: center !important;
@@ -693,21 +708,24 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   display: none !important;
 }
 
-#downloadsListBox .downloadButton {
-  margin-inline-end: 16px !important;
-  height: 32px !important;
-  min-width: 32px !important;
-  border-radius: 16px !important;
-  fill: currentColor !important;
-  -moz-context-properties: fill, fill-opacity !important;
-  display: block !important;
+#panelMenu_downloadsMenu > .subviewbutton {
+  display: grid;
+  grid-template-columns: 40px 1fr 50px;
+  align-items: center;
+  padding: 0 !important;
 }
 
-#downloadsListBox .downloadButton .button-box {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  max-width: 32px !important;
+.subviewbutton.download > .action-button {
+  height: 100% !important;
+  margin: 0 !important;
+}
+
+#panelMenu_downloadsMenu .toolbarbutton-icon {
+  margin-inline-end: 0 !important;
+  justify-self: center;
+}
+.subviewbutton.download > .toolbarbutton-text {
+  padding-inline-start: 0 !important;
 }
 
 #confirmation-hint .panel-arrowcontent,
@@ -725,7 +743,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
 .customization-lwtheme-menu-theme,
 .customization-uidensity-menuitem {
   padding: 0 16px !important;
-  margin: 0 -16px !important;
+  margin: 0 !important;
   border: 0 !important;
   height: 48px !important;
 }
@@ -754,26 +772,20 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   height: 18px !important;
   margin-inline-start: 16px !important;
 }
-
+#customization-lwtheme-menu-footer,
+#customization-lwtheme-menu-header {
+  margin-inline: 0 !important;
+}
+#customization-lwtheme-menu-header {
+  margin-top: 0 !important;
+}
 #customization-lwtheme-menu-footer {
+  margin-bottom: 0 !important;
   padding: 0 !important;
-  background: 0 !important;
-  border: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
+  background: var(--arrowpanel-dimmed) !important;
 }
-
-#customization-lwtheme-menu-footer toolbarbutton {
-  border: 0 !important;
-  margin: 0 -6px 0 !important;
-  height: 48px !important;
-  padding: 0 16px !important;
-  display: flex !important;
-  background-image: none !important;
-}
-
-#customization-lwtheme-menu-footer toolbarbutton .toolbarbutton-text {
-  text-align: start !important;
+.customization-lwtheme-menu-footeritem:hover {
+  background: var(--arrowpanel-dimmed-further) !important;
 }
 
 .panel-footer {
@@ -815,7 +827,7 @@ panelmultiview .toolbaritem-combined-buttons > spacer.after-label {
   top: 0 !important;
   width: 100% !important;
   height: 100% !important;
-  border: 1px solid currentColor !important;
+  /* border: 1px solid currentColor !important; */
   opacity: 0.42 !important;
   box-sizing: border-box !important;
 }
