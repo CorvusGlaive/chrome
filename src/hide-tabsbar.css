@@ -1,34 +1,47 @@
-:root{ --uc-toolbar-height: 32px; }
+:root {
+  --uc-toolbar-height: 32px;
+}
 
-:root:not([uidensity="compact"]){--uc-toolbar-height: 33px}
+:root:not([uidensity="compact"]) {
+  --uc-toolbar-height: 33px;
+}
 
-#TabsToolbar{ visibility: collapse !important }
+:root:not([privatebrowsingmode]) #TabsToolbar {
+  visibility: collapse !important;
+}
 
-:root:not([inFullscreen]) #nav-bar{
+:root:not([privatebrowsingmode]):not([inFullscreen]) #nav-bar {
   margin-top: calc(0px - var(--uc-toolbar-height));
   max-height: 34px;
 }
 
-#toolbar-menubar{
-  min-height:unset !important;
-  height:var(--uc-toolbar-height) !important;
+:root:not([privatebrowsingmode]) #toolbar-menubar {
+  min-height: unset !important;
+  height: var(--uc-toolbar-height) !important;
   position: relative;
 }
 
-#main-menubar{
+:root:not([privatebrowsingmode]) #main-menubar {
   -moz-box-flex: 1;
-  background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+  background-color: var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor);
   background-clip: padding-box;
   border-right: 30px solid transparent;
-  border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
+  border-image: linear-gradient(
+      to left,
+      transparent,
+      var(--toolbar-bgcolor, --toolbar-non-lwt-bgcolor) 30px
+    )
+    20 / 30px;
 }
 
-#toolbar-menubar:not([inactive]){ z-index: 2 }
-#toolbar-menubar[inactive] > #menubar-items {
+:root:not([privatebrowsingmode]) #toolbar-menubar:not([inactive]) {
+  z-index: 2;
+}
+:root:not([privatebrowsingmode]) #toolbar-menubar[inactive] > #menubar-items {
   opacity: 0;
   pointer-events: none;
-  margin-left: var(--uc-window-drag-space-width,0px)
+  margin-left: var(--uc-window-drag-space-width, 0px);
 }
-#nav-bar {
+:root:not([privatebrowsingmode]) #nav-bar {
   padding: 0 150px !important;
 }
