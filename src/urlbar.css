@@ -21,12 +21,12 @@
 
 #urlbar[focused],
 #searchbar[focused] {
-  border: 2px solid var(--toolbar-field-focus-border-color) !important;
+  box-shadow: 0 0 0 2px #6e84fb, 0 0 15px -2px #6e84fba6, 0 0 40px 0px #6e84fb66 !important;
   padding: 0 !important;
   margin: 0 !important;
 }
 #urlbar[breakout][breakout-extend] {
-  top: 1px !important;
+  top: 3px !important;
   left: 0 !important;
   width: 100% !important;
 }
