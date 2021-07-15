@@ -5,18 +5,26 @@
 }
 #urlbar-input-container {
   height: 26px !important;
-  padding: 0 !important;
+  padding: 2px !important;
   border: 0 !important;
 }
 #urlbar,
 #searchbar {
   font-size: 14px !important;
   font-family: var(--font-family) !important;
-  background-color: var(--toolbar-field-background-color) !important;
-  border-radius: 3px !important;
+  background-color: var(--lwt-toolbar-field-background-color, hsla(0,0%,100%,.8)) !important;
+  border-radius: 4px !important;
   line-height: 1.2 !important;
   --urlbar-height: 26px !important;
   --urlbar-toolbar-height: 32px !important;
+}
+
+#identity-box[pageproxystate=invalid] {
+  margin-inline-start: 14px !important;
+  margin-inline-end: 14px !important;
+}
+#identity-box[pageproxystate=invalid]  .identity-box-button {
+  padding-inline: 0 !important;
 }
 
 #urlbar[focused],
@@ -89,7 +97,6 @@
 .urlbar-icon {
   width: var(--urlbar-height) !important;
   height: var(--urlbar-height) !important;
-  padding: 5px !important;
 }
 
 .urlbarView-favicon {

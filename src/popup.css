@@ -1,0 +1,272 @@
+menu,
+menupopup,
+menuitem,
+panel,
+popupnotification,
+panelview {
+  font-size: 12px !important;
+}
+menupopup,
+panel * {
+  font-family: var(--font-family) !important;
+}
+
+/* Popup's background */
+.menupopup-arrowscrollbox,
+.panel-arrowcontent,
+[part="content"] {
+  background-color: var(--toolbar-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}
+
+panelview {
+  background: transparent !important;
+}
+
+menupopup {
+  -moz-window-shadow: none !important;
+  padding: 11px 14px 18px !important;
+  margin: -16px -10px 0 !important;
+}
+
+menu,
+menuitem {
+  margin: 0 var(--menu-item-padding) !important;
+  border-radius: var(--border-radius) !important;
+}
+
+menuseparator {
+  appearance: none !important;
+  margin: var(--menu-item-padding) 0 !important;
+  border-top: 1px solid var(--panel-separator-color) !important;
+}
+
+.popup-internal-box,
+.menupopup-arrowscrollbox {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+    0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+}
+
+.menu-iconic > .menu-iconic-left,
+.menuitem-iconic > .menu-iconic-left {
+  margin-inline-end: 1em !important;
+}
+
+#context-navigation:not([hidden]) {
+  display: flex !important;
+  padding: 0 var(--menu-item-padding) !important;
+}
+
+#context-navigation * {
+  padding: 0 !important;
+  padding-inline: 0 !important;
+  margin: 0 !important;
+  margin-inline: 0 !important;
+}
+
+#context-navigation .menuitem-iconic {
+  width: 100% !important;
+  -moz-box-pack: center !important;
+  flex: 1 !important;
+}
+
+#context-navigation .menu-iconic-icon {
+  width: 16px !important;
+  height: 16px !important;
+  margin: 8px 0 !important;
+}
+
+:is(menu, menuitem)[_moz-menuactive]:not([disabled]) {
+  background-color: var(--button-hover-bgcolor) !important;
+  color: var(--toolbar-color) !important;
+}
+
+[_moz-menuactive] *,
+[_moz-menuactive][disabled] {
+  background-color: transparent !important;
+}
+
+:is(menu, menuitem)[disabled] {
+  color: var(--panel-disabled-color) !important;
+}
+
+/* ==================================== */
+/* Panels */
+
+:root {
+  --arrowpanel-padding: 8px !important;
+  --arrowpanel-menuitem-margin: 0 4px !important;
+  --panel-subview-body-padding: 4px 0 !important;
+  --panel-separator-margin: 4px 0 !important;
+}
+
+.panel-banner-item {
+  margin: 0 var(--menu-item-padding) var(--menu-item-padding) !important;
+  background-color: color-mix(
+    in srgb,
+    var(--panel-banner-item-background-color) 80%,
+    var(--panel-banner-item-update-supported-bgcolor)
+  ) !important;
+}
+.panel-banner-item:hover {
+  background-color: color-mix(
+    in srgb,
+    var(--panel-banner-item-background-color) 60%,
+    var(--panel-banner-item-update-supported-bgcolor)
+  ) !important;
+}
+
+.panel-subview-footer-button,
+.PanelUI-remotetabs-clientcontainer {
+  margin-bottom: var(--menu-item-padding) !important;
+}
+
+.panel-header {
+  padding: 0px !important;
+  padding-top: var(--menu-item-padding) !important;
+}
+
+#identity-popup-security-button {
+  margin-bottom: 0 !important;
+}
+#identity-popup-security-button[footerHidden="true"] {
+  margin-bottom: var(--menu-item-padding) !important;
+}
+
+#widget-overflow .panel-subview-body {
+  padding-bottom: 0 !important;
+}
+
+#allTabsMenu-allTabsViewTabs {
+  padding-bottom: var(--menu-item-padding) !important;
+}
+
+#allTabsMenu-allTabsViewTabs > .all-tabs-item {
+  margin-inline: var(--menu-item-padding) !important;
+}
+
+/* ==================================== */
+/* Downloads Panels */
+
+#downloadsPanel-mainView,
+#downloadsListBox {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+#downloadsListBox {
+  padding-top: var(--menu-item-padding) !important;
+}
+#downloadsListBox > richlistitem {
+  margin: 0 var(--menu-item-padding) !important;
+}
+#downloadsFooterButtons {
+  margin: 0 var(--menu-item-padding) !important;
+}
+
+#emptyDownloads {
+  padding: 1em 1em calc(1em - var(--menu-item-padding)) !important;
+}
+
+#downloadsFooterButtons > toolbarseparator {
+  margin: var(--menu-item-padding) calc(0px - var(--menu-item-padding)) !important;
+}
+
+/* ==================================== */
+/* Add bookmark */
+
+#editBookmarkHeaderSeparator,
+#editBookmarkSeparator {
+  margin: var(--menu-item-padding) 0 !important;
+}
+
+#editBookmarkSeparator {
+  border-top: 1px solid transparent !important;
+}
+
+#editBookmarkPanelImage {
+  border-radius: var(--border-radius) !important;
+}
+
+#editBookmarkPanel .expander-up,
+#editBookmarkPanel .expander-down {
+  border-radius: var(--border-radius) !important;
+  width: 34px !important;
+  height: 34px !important;
+}
+
+#editBookmarkPanelRemoveButton {
+  order: 1 !important;
+}
+
+.panel-footer {
+  margin: var(--arrowpanel-padding) !important;
+}
+.panel-footer > button {
+  margin-left: 4px !important;
+  padding: 6px 16px !important;
+}
+
+/* ==================================== */
+/* Scrollbar */
+.panel-subview-body,
+#permList,
+scrollbar {
+  color: inherit;
+  scrollbar-color: gray transparent;
+  scrollbar-width: thin;
+}
+
+/* ==================================== */
+/* Searchbar */
+findbar {
+  border-top: none !important;
+  padding-block: 4px !important;
+}
+
+/* ==================================== */
+/* Sidebar */
+#sidebar-splitter {
+  border: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  width: 4px !important;
+  min-width: 1px !important;
+  position: relative !important;
+  margin-inline-start: -4px !important;
+}
+
+/* ==================================== */
+/* Linux */
+@media not (-moz-os-version: windows-win10) {
+  menupopup {
+    background: 0 !important;
+    border: none !important;
+  }
+
+  .menupopup-arrowscrollbox {
+    border-radius: var(--border-radius) !important;
+    padding-block: var(--menu-item-padding) !important;
+    border: 1px solid var(--arrowpanel-border-color) !important;
+  }
+
+  :is(menupopup) menu,
+  menuitem {
+    appearance: none !important;
+    padding: 0.5em 1em !important;
+  }
+
+  .menu-text {
+    margin-left: 0 !important;
+  }
+
+  .menu-right {
+    width: 16px !important;
+    height: 16px !important;
+    appearance: none !important;
+    list-style-image: url(chrome://global/skin/icons/arrow-right.svg) !important;
+    -moz-context-properties: fill, fill-opacity !important;
+    fill: currentColor !important;
+    fill-opacity: 0.6 !important;
+  }
+
+}

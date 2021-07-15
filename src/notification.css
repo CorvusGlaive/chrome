@@ -1,14 +1,14 @@
 @-moz-document url("chrome://global/content/alerts/alert.xhtml") {
 	#alertBox {
         border-color: rgba(107,107,107,.3) !important;
-        border-radius: 8px !important;
+        border-radius: 4px !important;
         font-family: Inter !important;
 		background: url("chrome://global/skin/media/imagedoc-darknoise.png") !important;
 		color: rgba(215,215,215,.9) !important;
 		/* backdrop-filter: blur(32px) !important; */
     }
     #alertImage {
-        border-radius: 5px !important;
+        border-radius: 4px !important;
     }
 	#alertSettings {
 		-moz-context-properties: fill, fill-opacity !important;
