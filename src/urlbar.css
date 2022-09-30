@@ -1,7 +1,7 @@
 #urlbar-input,
 #urlbar-scheme,
 .searchbar-textbox {
-  font-family: Iosevka !important;
+  font-family: Iosevka, monospace !important;
 }
 #urlbar-input-container {
   height: 26px !important;
