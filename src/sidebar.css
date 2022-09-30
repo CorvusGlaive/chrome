@@ -1,0 +1,40 @@
+#sidebar-box {
+  overflow: hidden;
+  height: 100%;
+  position: fixed;
+  width: 20em;
+  max-width: 30px;
+  display: block;
+  transition: 90ms;
+  border-right: 1px solid var(--sidebar-border-color);
+}
+
+html[privatebrowsingmode] #sidebar-box {
+  display: none !important;
+}
+
+#sidebar-header,
+#sidebar {
+  width: 100%;
+}
+
+#sidebar {
+  height: 100%;
+}
+
+#sidebar-box:not(:is(:hover, :has([open]))) #sidebar-header {
+  padding-left: 2px !important;
+}
+
+#sidebar-box:is(:hover, :has([open])) {
+  max-width: 100%;
+  z-index: 3;
+}
+
+html:not(:is([inFullscreen], [privatebrowsingmode])) #appcontent {
+  margin-left: 30px;
+}
+
+#sidebar-splitter {
+  display: none !important;
+}
