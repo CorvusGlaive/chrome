@@ -1,37 +1,12 @@
 @font-face {
-  font-family: SFPro;
-  src: url(./fonts/SF-Pro.ttf);
-}
-@font-face {
-  font-family: Inter;
-  src: url(./fonts/Inter.ttf);
-}
-@font-face {
-  font-family: Iosevka;
-  src: url(./fonts/iosevka-regular.ttf);
-}
-@font-face {
-  font-family: SFPD;
-  src: url(./fonts/SF-Pro-Display-Regular.otf);
-  font-weight: normal;
-}
-@font-face {
-  font-family: SFPD;
-  src: url(./fonts/SF-Pro-Display-Bold.otf);
-  font-weight: bold;
-}
-@font-face {
   font-family: Jost;
   src: url(./fonts/Jost.ttf);
 }
 
-:root[platform="win"] {
-  --font-family: serif !important;
-}
 :root {
   --font-family: Jost;
   --menu-item-padding: 4px;
-  --border-radius: 4px
+  --border-radius: 4px;
 }
 
 #navigator-toolbox {
