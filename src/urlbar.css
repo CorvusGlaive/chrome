@@ -12,7 +12,7 @@
 #searchbar {
   font-size: 14px !important;
   font-family: var(--font-family) !important;
-  background-color: var(--lwt-toolbar-field-background-color, hsla(0,0%,100%,.8)) !important;
+  background-color: var(--toolbar-field-background-color, hsla(0,0%,100%,.8)) !important;
   border-radius: 4px !important;
   line-height: 1.2 !important;
   --urlbar-height: 26px !important;

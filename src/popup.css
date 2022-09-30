@@ -15,8 +15,8 @@ panel * {
 .menupopup-arrowscrollbox,
 .panel-arrowcontent,
 [part="content"] {
-  background-color: var(--toolbar-bgcolor) !important;
-  color: var(--toolbar-color) !important;
+  background-color: var(--toolbar-bgcolor, var(--panel-background)) !important;
+  color: var(--toolbar-color, var(--panel-color)) !important;
 }
 
 panelview {
@@ -25,8 +25,8 @@ panelview {
 
 menupopup {
   -moz-window-shadow: none !important;
-  padding: 11px 14px 18px !important;
-  margin: -16px -10px 0 !important;
+  padding: 12px !important;
+  margin: -21px -10px 0 !important;
 }
 
 menu,
@@ -77,8 +77,8 @@ menuseparator {
 }
 
 :is(menu, menuitem)[_moz-menuactive]:not([disabled]) {
-  background-color: var(--button-hover-bgcolor) !important;
-  color: var(--toolbar-color) !important;
+  background-color: var(--panel-item-hover-bgcolor, -moz-menuhover) !important;
+  color: var(--panel-color, -moz-menuhovertext) !important;
 }
 
 [_moz-menuactive] *,
@@ -224,20 +224,8 @@ findbar {
 }
 
 /* ==================================== */
-/* Sidebar */
-#sidebar-splitter {
-  border: none !important;
-  background-image: none !important;
-  background-color: transparent !important;
-  width: 4px !important;
-  min-width: 1px !important;
-  position: relative !important;
-  margin-inline-start: -4px !important;
-}
-
-/* ==================================== */
 /* Linux */
-@media not (-moz-os-version: windows-win10) {
+@media (-moz-platform: linux) {
   menupopup {
     background: 0 !important;
     border: none !important;
@@ -268,5 +256,4 @@ findbar {
     fill: currentColor !important;
     fill-opacity: 0.6 !important;
   }
-
 }
